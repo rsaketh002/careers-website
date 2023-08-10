@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saketh Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      #banner {
+        height: 360px;
+        width: 100%;
+        object-fit:cover;
+        margin-bottom: 16px;
+      }
+    </style>
+    <body>
+      <div class='container'>
+        <h1 class='text-center mt-2 mb-4'>{{company_name}} Careers</h1>
+        <img class='img-fluid' id="banner" src="static/img.jpg" height='320'>
+        <h2 class='text-center'>About {{company_name}}</h2>
+        <p class='lead'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At erat pellentesque adipiscing commodo elit at. Tortor dignissim convallis aenean et tortor at. Nam aliquam sem et tortor. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Pretium fusce id velit ut tortor pretium. Eget sit amet tellus cras adipiscing enim eu turpis. Fermentum dui faucibus in ornare quam viverra orci sagittis eu. Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Bibendum at varius vel pharetra. In ante metus dictum at tempor commodo.
+        </p>
+        <h2 class='text-center mt-2 mb-4'>Open Positions</h2>
+        <div>
+          {%for job in jobs%}
+            {% include 'jobitem.html' %}
+          {%endfor%}
+        </div>
+        <div class='text-center'>
+          <button class="btn btn-primary btn-lg">Contact Us</button>
+          <p class='mt-4'>Copyright 2023, {{company_name}}</p>
+        </div>
+      </div>
+    </body>
+  </head>
+</html>
